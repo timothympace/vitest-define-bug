@@ -1,0 +1,69 @@
+> vitest run
+
+
+ RUN  v2.1.6 ~/Desktop/vitest-define-bug
+
+stdout | tests/five.test.ts
+With waitMs: 1204ms
+
+stdout | tests/two.test.ts
+With waitMs: 1208ms
+
+stdout | tests/one.test.ts
+With waitMs: 1228ms
+
+stdout | tests/three.test.ts
+With waitMs: 1232ms
+
+stdout | tests/four.test.ts
+With waitMs: 1237ms
+
+stdout | tests/two.test.ts
+Uptime: 1620.8394580483437ms
+Config is defined!
+
+stderr | tests/five.test.ts
+Config is not defined!
+
+stdout | tests/five.test.ts
+Uptime: 1627.6248329877853ms
+
+stdout | tests/three.test.ts
+Uptime: 1666.3294169902802ms
+Config is defined!
+
+stdout | tests/one.test.ts
+Uptime: 1654.2362909913063ms
+Config is defined!
+
+stdout | tests/four.test.ts
+Uptime: 1658.6666660308838ms
+Config is defined!
+
+ ❯ tests/five.test.ts (0)
+ ✓ tests/four.test.ts (1) 303ms
+ ✓ tests/one.test.ts (1) 303ms
+ ✓ tests/three.test.ts (1) 302ms
+ ✓ tests/two.test.ts (1) 302ms
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/five.test.ts [ tests/five.test.ts ]
+ReferenceError: Config is not defined
+ ❯ utils/index.ts:14:1
+     12| }
+     13| 
+     14| if (Config.isDefined) {
+       | ^
+     15|   console.log("Config is defined!");
+     16| }
+ ❯ tests/five.test.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  4 passed (4)
+   Start at  17:24:28
+   Duration  2.02s (transform 138ms, setup 0ms, collect 5.13s, tests 1.21s, environment 895ms, prepare 353ms)
+
+ ELIFECYCLE  Test failed. See above for more details.
